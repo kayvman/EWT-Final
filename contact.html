@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Contact Phoenix</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+		<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+		<link href='http://fonts.googleapis.com/css?family=Plaster' rel='stylesheet' type='text/css'>
+		
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="js/html5.js"></script>
+		<link rel="stylesheet" href="css/ie.css" type="text/css" media="all">
+		<![endif]-->
+		<!--[if lt IE 7]>
+			<div style=' clear: both; text-align:center; position: relative;'>
+				<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a>
+			</div>
+		<![endif]-->
+        <style type="text/css">
+
+
+		
+		input:invalid, select:invalid, textarea:invalid {
+			border: 1px solid #f00;
+		}
+
+		input ~ span:after {
+			content: attr(title);
+			color: #f00;
+			margin-left: 4px;
+			opacity: 0;
+		}
+
+		input:invalid ~ span:after {
+			opacity: 1;
+		}
+
+
+
+		input:valid, textarea:valid{
+			border: 1px solid #0f0;
+		}
+
+
+
+</style>
+<!--
+.style1 {color: #FFFFFF}
+-->
+        </style>
+</head>
+	
+		<div class="main">
+			<header>
+				<div class="wrapper"><img src="images/logo.png" class="fader1" style="margin-top:9px;" alt="logo" /><div id="icons">
+				<ul>
+					<li><a href="http://www.facebook.com/wearephoenix" target="_blank"><img src="images/icon1.jpg" class="fader1" alt="facebook" /></a></li>
+					<li><a href="http://twitter.com/#!/wearephoenix" target="_blank"><img src="images/icon2.jpg" class="fader1" alt="twitter" /></a></li>
+					
+				</ul>
+					</div>
+				<nav>
+					<ul id="menu">
+						<li ><a href="index.html"><span>HOME</span></a></li>
+						<li ><a href="albums.html"><span>ALBUMS</span></a></li>
+						<li class="active" style="padding-right:0px"><a href="contact.html"><span>CONTACTS</span></a></li>
+					</ul>
+				</nav>
+				
+			</header>
+
+<!--content -->
+			
+
+			<article id="content" class="shadow" style="height:400px;" >
+				<div class="wrapper">
+					<form>
+			<fieldset><h1 id="bio">Contact Us...</h1><br/><br/>
+				<legend></legend>
+
+				<label for="name" style="margin-left:115px;">Name</label>&nbsp;
+				<input type="text" name="name" id="name" placeholder="Joe Shmo" input required="required" />
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+				<label for="age">Age</label>&nbsp;
+				<input type="number" name="age" id="age" input required="required" pattern="(^-\d*\.?\d*[1-9]+\d*$)|(^-[1-9]+\d*\.\d*$)" placeholder="#number#" />
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+				<label for="email">Email</label>&nbsp;
+				<input type="email" name="email" id="email" pattern="^([a-zA-Z0-9_\-\.]+)@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})" input required="required" placeholder="John@domain.com"/><br/><br/>
+
+				<label for="hometown" style="margin-left:85px;">Hometown</label>&nbsp;
+				<input type="text" name="hometown" id="hometown" input required="required" placeholder="Los Angeles"/>&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;
+				<label for="birthday">Birthday</label>&nbsp;
+				<input type="date" name="birthday" id="birthday" input required="required" pattern="^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$" placeholder="mm/dd/yyyy"  />
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;
+				<label for="homepage">Homepage</label>
+				<input type="url" name="homepage" id="homepage" placeholder="www.yoursite.com" pattern="(http|https)://([\w-]+\.)+[\w-]+(/[\w- ./?%&=]*)?"  /><br/><br/>
+
+	&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			
+				<label for="message">Comments</label>
+				<textarea type="text" name="message" id="message" placeholder="So what's up?" input required="required" /></textarea>
+
+
+
+				
+			</fieldset>
+
+			<button type="submit" id="submit" style="margin-left:159px;">Submit Application</button>
+			<button type="reset" id="clear_stor" onClick="javascript:reset_me();" value="Reset Form">Clear Application</button>
+		</form>
+		  	<br/><br/>
+		  </article>
+		
+		
+		
+		</div>
+			<br/><br/>
+<!--content end-->
+<!--footer -->
+			<footer>
+				&copy; Website by Kayvan Nemayeshi
+				
+        
+				<!-- {%FOOTER_LINK} -->
+			</footer>
+<!--footer end-->
+		</div>
+		<!--[if lt IE 7 ]>
+		<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+	<script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+<![endif]-->
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+	// wait until the page is fully loaded to start firing our javascript
+	$(document).ready(function() {
+		
+		$('#clear_stor').click(function reset_me(){
+ localStorage.clear();})
+
+
+		// call function that will populate form with info from local storage
+		populate_form_with_stored_info();
+
+
+
+		// store the name every time a user types in the name field
+		$('#name').keyup(function() {
+			// only store the name if it's not blank
+			if ($('#name').val() != '') {
+				localStorage.setItem('name', $('#name').val());
+			}
+		});
+
+		$('#age').change(function() {
+			
+			if ($('#age').val() != '') {
+				localStorage.setItem('age', $('#age').val());
+			}
+		});
+
+		$('#email').keyup(function() {
+			
+			if ($('#email').val() != '') {
+				localStorage.setItem('email', $('#email').val());
+			}
+		});
+
+		$('#hometown').keyup(function() {
+			
+			if ($('#hometown').val() != '') {
+				localStorage.setItem('hometown', $('#hometown').val());
+			}
+		});
+
+		$('#birthday').keyup(function() {
+			
+			if ($('#birthday').val() != '') {
+				localStorage.setItem('birthday', $('#birthday').val());
+			}
+		});
+
+		$('#homepage').keyup(function() {
+			
+			if ($('#homepage').val() != '') {
+				localStorage.setItem('homepage', $('#homepage').val());
+			}
+		});
+
+		$('#message').keyup(function() {
+			
+			if ($('#message').val() != '') {
+				localStorage.setItem('message', $('#message').val());
+			}
+		});
+
+		
+	
+
+
+
+
+		// for an example of storing information from a multiple select,
+		// see line 266 from the objects demo from the slides 
+		// http://iam.colum.edu/Jon.Petto/ewt/local-storage/demo/objects.php
+	});
+
+
+	function populate_form_with_stored_info() {
+		// check for stored name
+		var stored_name = localStorage.getItem('name');
+		if (stored_name !== '') {
+			$('#name').val(stored_name);
+		}
+
+		var stored_age = localStorage.getItem('age');
+		if (stored_age !== '') {
+			$('#age').val(stored_age);
+		}
+
+		var stored_email = localStorage.getItem('email');
+		if (stored_email !== '') {
+			$('#email').val(stored_age);
+		}
+
+		var stored_hometown = localStorage.getItem('hometown');
+		if (stored_hometown !== '') {
+			$('#hometown').val(stored_hometown);
+		}
+
+		var stored_birthday = localStorage.getItem('birthday');
+		if (stored_birthday !== '') {
+			$('#birthday').val(stored_birthday);
+		}
+
+		var stored_homepage = localStorage.getItem('homepage');
+		if (stored_homepage !== '') {
+			$('#homepage').val(stored_homepage);
+		}
+
+		var stored_message = localStorage.getItem('message');
+		if (stored_message !== '') {
+			$('#message').val(stored_message);
+		}
+
+			
+	}
+
+
+</script>
+</body>
+</html>
